@@ -6,5 +6,14 @@
     "action": { 
       "default_popup": "hello.html",
       "default_icon": "icon.png"
-    }
+    },
+    "content_scripts": [{
+      "js": ["content/script.js"],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }],
+
+    "permissions": ["activeTab", "scripting"]
 }
